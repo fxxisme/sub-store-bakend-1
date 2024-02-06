@@ -10,4 +10,6 @@ ADD https://github.com/sub-store-org/Sub-Store-Front-End/releases/latest/downloa
 
 RUN unzip dist.zip; mv dist frontend; rm dist.zip; 
 
+EXPOSE 3000
+
 CMD mkdir -p /opt/app/data; cd /opt/app/data; SUB_STORE_FRONTEND_PATH=/opt/app/frontend SUB_STORE_DATA_BASE_PATH=/opt/app/data node /opt/app/sub-store.bundle.js
